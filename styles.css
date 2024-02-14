@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'P5';
+    src: url('fonts/KoreanKRSM.woff2') format('woff');
+}
+
+* {
+    font-family: P5;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    font-family: P5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/bg3.png') no-repeat center center fixed;
+    background-size: cover;
+    transition: opacity 2s ease-in-out;
+    z-index: -1;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 24px;
+    width: 200px;
+    height: 80px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #0056b3;
+}
+
+#startButton:active {
+    background-color: #004299;
+}
+
+/* Adjust this to make the transition smoother or quicker */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#slideImg {
+    z-index: -1;
+    position: fixed;
+    bottom: 0; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 2s ease-in-out; /* Smooth transition for fading in */
+    z-index: 10; /* Ensure it's visible above the background */
+    width: 90%; /* Adjust width to desired size */
+    /* height: auto; */ /* This line can be omitted if maintaining aspect ratio */
+    display: block; /* Make sure it's not set to 'none' */
+}
+
+#dialogue {
+    z-index: 100;
+    position: absolute;
+    font-size: 82%;
+    color: white;
+    width: 30%;
+
+    top: 76%;
+    left: 38%;
+    rotate: 355.5deg;
+}
