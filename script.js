@@ -113,6 +113,7 @@ function game() {
             currentIndex++;
         } else {
             // Game over or content finished, remove event listeners
+            document.alert('To my sweetest Bianca, I love you, and a happy Valentine\'s Day <3')
             document.removeEventListener('click', nextContent);
             document.removeEventListener('touchstart', nextContent);
         }
