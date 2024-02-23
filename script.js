@@ -1,4 +1,5 @@
 document.getElementById("startButton").addEventListener("click", function() {
+    alert('To my sweetest Bianca, I love you, and a happy Valentine\'s Day <3')
     var background = document.querySelector('.background');
     var button = this;
     var slideImg = document.getElementById('slideImg'); // Ensure this matches your image's ID
@@ -113,7 +114,6 @@ function game() {
             currentIndex++;
         } else {
             // Game over or content finished, remove event listeners
-            document.alert('To my sweetest Bianca, I love you, and a happy Valentine\'s Day <3')
             document.removeEventListener('click', nextContent);
             document.removeEventListener('touchstart', nextContent);
         }
